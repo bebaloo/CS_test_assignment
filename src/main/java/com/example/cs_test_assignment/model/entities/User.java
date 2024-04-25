@@ -1,7 +1,7 @@
 package com.example.cs_test_assignment.model.entities;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
 import java.time.LocalDate;
 
