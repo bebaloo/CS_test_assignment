@@ -1,13 +1,15 @@
 package com.example.cs_test_assignment.service;
 
-import com.example.cs_test_assignment.model.dto.UserDTO;
+import com.example.cs_test_assignment.model.dto.BirthDateRangeDTO;
+import com.example.cs_test_assignment.model.dto.RequestUserDTO;
+import com.example.cs_test_assignment.model.dto.ResponseUserDTO;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface UserService {
-    UserDTO create(UserDTO userDTO);
-    UserDTO update(UserDTO userDTO, Long id);
+    ResponseUserDTO create(RequestUserDTO requestUserDTO);
+    ResponseUserDTO update(RequestUserDTO requestUserDTO, Long id);
+    ResponseUserDTO updateFields(RequestUserDTO requestUserDTO, Long id);
     void delete(Long id);
-    List<UserDTO> searchByBirthDateRange(LocalDate fromDate, LocalDate toDate);
+    List<ResponseUserDTO> searchByBirthDateRange(BirthDateRangeDTO birthDateRangeDTO);
 }
