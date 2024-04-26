@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 public class AdultValidator implements ConstraintValidator<Adult, LocalDate> {
     private int minAge;
+
     @Override
     public void initialize(Adult constraintAnnotation) {
         this.minAge = constraintAnnotation.minAge();
@@ -15,7 +16,7 @@ public class AdultValidator implements ConstraintValidator<Adult, LocalDate> {
 
     @Override
     public boolean isValid(LocalDate birthDate, ConstraintValidatorContext context) {
-        if(birthDate == null){
+        if (birthDate == null) {
             return false;
         }
         LocalDate today = LocalDate.now();
