@@ -8,8 +8,12 @@ import java.util.List;
 
 public interface UserService {
     ResponseUserDTO create(RequestUserDTO requestUserDTO);
+
     ResponseUserDTO update(RequestUserDTO requestUserDTO, Long id);
+
     ResponseUserDTO updateFields(RequestUserDTO requestUserDTO, Long id);
+
     void delete(Long id);
+
     List<ResponseUserDTO> searchByBirthDateRange(BirthDateRangeDTO birthDateRangeDTO);
 }

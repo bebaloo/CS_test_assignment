@@ -16,7 +16,10 @@ import java.lang.annotation.Target;
 public @interface Adult {
     @Value("${user.minAge}")
     int minAge() default 18;
+
     String message() default "User must be at least 18 years old";
+
     Class<?>[] groups() default {};
+
     Class<? extends Payload>[] payload() default {};
 }
