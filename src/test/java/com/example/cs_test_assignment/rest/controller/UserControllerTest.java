@@ -270,13 +270,13 @@ class UserControllerTest {
         when(userService.searchByBirthDateRange(any(BirthDateRangeDTO.class))).thenReturn(users);
 
         mockMvc.perform(get("/api/v1/users/birth-date/range")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content("""
-                        {
-                        "fromDate" : "1980-10-10",
-                        "toDate" : "2003-10-10"
-                        }
-                        """))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                                {
+                                "fromDate" : "1980-10-10",
+                                "toDate" : "2003-10-10"
+                                }
+                                """))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$.[0].id")
