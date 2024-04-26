@@ -38,14 +38,14 @@ public class UserController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         userService.delete(id);
-        return ResponseEntity.status(HttpStatus.OK).build();
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 
     @GetMapping("/birth-date/range")
     public ResponseEntity<List<ResponseUserDTO>> searchByBirthDateRange(
             @RequestBody BirthDateRangeDTO birthDateRangeDTO) {
         return ResponseEntity
-                .status(HttpStatus.FOUND)
+                .status(HttpStatus.OK)
                 .body(userService.searchByBirthDateRange(birthDateRangeDTO));
     }
 }
