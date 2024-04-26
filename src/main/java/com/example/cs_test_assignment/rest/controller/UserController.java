@@ -45,7 +45,7 @@ public class UserController {
     public ResponseEntity<List<ResponseUserDTO>> searchByBirthDateRange(
             @RequestBody BirthDateRangeDTO birthDateRangeDTO) {
         return ResponseEntity
-                .status(HttpStatus.FOUND)
+                .status(HttpStatus.OK)
                 .body(userService.searchByBirthDateRange(birthDateRangeDTO));
     }
 }
