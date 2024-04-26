@@ -1,4 +1,4 @@
-package com.example.cs_test_assignment.model.mapper.config;
+package com.example.cs_test_assignment.model.mapper;
 
 import com.example.cs_test_assignment.model.dto.RequestUserDTO;
 import com.example.cs_test_assignment.model.entities.User;

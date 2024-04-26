@@ -1,4 +1,4 @@
-package com.example.cs_test_assignment.rest.exception.handler;
+package com.example.cs_test_assignment.rest.exception_handler;
 
 import com.example.cs_test_assignment.exceptions.EntityNotCreatedException;
 import com.example.cs_test_assignment.exceptions.EntityNotDeletedException;
